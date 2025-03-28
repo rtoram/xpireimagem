@@ -2,22 +2,42 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Upload e Download</title>
+    <title>PNG para SVG</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
         }
         input {
             padding: 10px;
             font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input:hover {
+            border-color: #888;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
-    <h1>Upload de Imagem</h1>
-    <input type="file" id="upload" accept="image/*" onchange="downloadImage()">
+    <div class="container">
+        <h1>Converter PNG para SVG</h1>
+        <input type="file" id="upload" accept="image/png" onchange="convertAndDownload()">
+    </div>
+
+    <!-- Biblioteca ImageTracerJS para conversão -->
+    <script src="https://cdn.jsdelivr.net/npm/imagetracerjs@1.2.6/imagetracer_v1.2.6.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
