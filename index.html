@@ -2,19 +2,22 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>PNG para SVG</title>
+    <title>Upload e Download</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        canvas, svg { max-width: 500px; margin-top: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <h1>Converter PNG para SVG</h1>
-    <input type="file" id="upload" accept="image/png" onchange="convertImage()">
-    <div id="output"></div>
-
-    <!-- Inclua a biblioteca ImageTracerJS -->
-    <script src="https://cdn.jsdelivr.net/npm/imagetracerjs@1.2.6/imagetracer_v1.2.6.min.js"></script>
+    <h1>Upload de Imagem</h1>
+    <input type="file" id="upload" accept="image/*" onchange="downloadImage()">
     <script src="script.js"></script>
 </body>
 </html>
